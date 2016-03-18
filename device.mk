@@ -95,7 +95,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8992
+    power.clark
 
 
 # NFC packages
