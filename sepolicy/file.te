@@ -16,7 +16,6 @@ type batt_health_sysfs, sysfs_type, fs_type;
 type pds_file, file_type;
 
 type sysfs_adspd, sysfs_type, fs_type;
-type hwrev_data_file, file_type, data_file_type;
 type chargeonly_data_file, file_type, data_file_type;
 type sysfs_light, sysfs_type;
 type sysfs_power, sysfs_type;

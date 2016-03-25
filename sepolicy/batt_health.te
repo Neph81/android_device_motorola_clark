@@ -3,7 +3,7 @@ type batt_health_exec, exec_type, file_type;
 init_daemon_domain(batt_health)
 
 allow batt_health battery_data_file:dir { search write add_name remove_name };
-allow batt_health battery_data_file:file { open write create read append getattr setattr rename };
+allow batt_health battery_data_file:file { open write create read append getattr setattr rename unlink};
 
 allow batt_health batt_health_data_file:dir rw_dir_perms;
 allow batt_health batt_health_data_file:file create_file_perms;
@@ -22,3 +22,4 @@ allow batt_health self:netlink_kobject_uevent_socket { bind create setopt read }
 
 allow batt_health sysfs_thermal:dir { search read open };
 allow batt_health sysfs_thermal:file { read open };
+
