@@ -563,7 +563,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/etc/msm_irqbalance.
     writepid /dev/cpuset/system-background/tasks
 
 service cnd /system/bin/cnd
-    class late_start
+    class main
     socket cnd stream 660 root inet
 
 service ssr_setup /system/bin/ssr_setup
@@ -591,7 +591,7 @@ service motosh /system/bin/motosh boot
     group compass misc input mot_tcmd
     oneshot
 
-service mmi-touch-sh /system/bin/init.mmi.touch.sh synaptics
+service mmi-touch-sh /system/bin/sh /init.mmi.touch.sh synaptics
     class core
     user root
     oneshot
